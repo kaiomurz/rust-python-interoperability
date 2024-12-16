@@ -10,5 +10,5 @@ fn it_works() -> bool {
 #[pymodule]
 fn setup(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(it_works, m)?)?;
-    m.Ok(())
+    Ok(())
 }

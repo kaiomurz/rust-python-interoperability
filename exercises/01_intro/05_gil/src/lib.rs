@@ -4,8 +4,8 @@ use pyo3::types::PyList;
 #[pyfunction]
 // TODO: Use `PyList` instead of `Vec<u64>` as the input type. Panic on errors, for now.
 // You might find this useful: https://pyo3.rs/v0.22.0/conversions/traits#extract-and-the-frompyobject-trait
-fn print_number_list(list: &PyList) {
-    todo!()
+fn print_number_list(list: Bound<'_, PyList>) {
+    list.iter().for_each(|item| println!("{item}"));
 }
 
 #[pymodule]
