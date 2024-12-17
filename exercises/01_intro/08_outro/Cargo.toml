@@ -8,3 +8,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = "0.22"
+num-bigint = "0.4"
